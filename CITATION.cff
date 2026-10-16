@@ -8,8 +8,8 @@ authors:
 version: 1.0.0
 date-released: 2026-10-15
 license: MIT
-repository-code: "https://github.com/USERNAME/pf2irc"
-url: "https://USERNAME.github.io/pf2irc/"
+repository-code: "https://github.com/beroparodi/pf2irc"
+url: "https://beroparodi.github.io/pf2irc/"
 keywords:
   - dwarf galaxies
   - rotation curves

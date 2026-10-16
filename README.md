@@ -6,7 +6,7 @@ Code, data and the interactive tool accompanying
 
 ## Grow a Dwarf Galaxy (interactive)
 
-Open **https://USERNAME.github.io/pf2irc/** in any browser, or download `index.html` and open it locally (it needs no installation).
+Open **https://beroparodi.github.io/pf2irc/** in any browser, or download `index.html` and open it locally (it needs no installation).
 Set the flat speed *v*, the spin λ, the end of growth, the feedback ε and the profile exponent *n*, and grow any of the 79 SPARC dwarfs of the paper.
 
 ## Code (`code/`)

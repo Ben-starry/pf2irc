@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or the interactive tool, please cite it as below."
+title: "pf2irc: code, data and the interactive tool 'Grow a Dwarf Galaxy'"
+authors:
+  - family-names: Parodi
+    given-names: Bernhard R.
+    affiliation: "GIBZ Gewerblich-industrielles Bildungszentrum Zug, Switzerland"
+version: 1.0.0
+date-released: 2026-10-15
+license: MIT
+repository-code: "https://github.com/USERNAME/pf2irc"
+url: "https://USERNAME.github.io/pf2irc/"
+keywords:
+  - dwarf galaxies
+  - rotation curves
+  - galaxy formation
+  - dark matter

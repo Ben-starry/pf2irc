@@ -1341,8 +1341,8 @@ report(f"  feedback per unit f_c: eps_fb = {_pc(_ef).round(3)}; coupling for bal
        f"slopes vs v: |eps_diss| {np.polyfit(np.log10(_vv), np.log10(-_ed), 1)[0]:+.2f}, eps_fb/f_c {np.polyfit(np.log10(_vv), np.log10(_ef), 1)[0]:+.2f}")
 report(f"  core equation solvable for A<0 only if |A| <= e^(-1-4B)/4 = {_Alim:.2e}: net loss <= 3lam^2+{_Alim:.5f} = {3*LAMSPIN**2+_Alim:.4f}; y_max there = {1/(4*_Alim):.0f}")
 
-# ---- "growing" individual galaxies (Fig. 9): uses the functions of grow.py (Appendix G)
-import grow as _g
+# ---- "growing" individual galaxies (Fig. 3): uses the functions of recipe.py (Appendix C)
+import recipe as _g
 def _core(v, lam, tg): return _g.grow(v, lam, z_of_t(tg))[0]   # tg in Gyr
 def _vc(v, rc, R): return _g.irc(np.maximum(R, 1e-9), v, rc)
 _fits = {r["name"]: r for r in csv.DictReader(open("sparc_data/sparc79_fits.csv"))}

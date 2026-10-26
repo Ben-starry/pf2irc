@@ -1,0 +1,16 @@
+[fits] 79 galaxies, 964 points; chi2 = 388.6 for 806 dof (chi2_nu = 0.48) with the error floor; with SPARC errors only chi2 = 1115.2 (chi2_nu = 1.38)
+  common n: Delta chi2 = 19 -> 39 if the errors are rescaled to chi2_nu = 1; free n: F = 12.1 for (79, 727) dof
+[slope r_c ~ v^b] N = 79, correlation r = 0.51, spread of log v 0.17 dex, of log r_c 0.34 dex
+  ML, scatter in r_c, with systematics (paper)     b =  0.95 +- 0.19   (b=2 at  5.4 sigma, b=1 at  -0.3 sigma); intrinsic scatter 0.26 dex
+  ML, scatter in r_c, fit errors only              b =  0.97 +- 0.19   (b=2 at  5.5 sigma, b=1 at  -0.2 sigma); intrinsic scatter 0.27 dex
+  ML, scatter perpendicular (symmetric)            b =  0.95 +- 0.19   (b=2 at  5.7 sigma, b=1 at  -0.3 sigma); intrinsic scatter 0.19 dex
+  OLS(r_c|v)                                       b =  1.02 +- 0.16   (b=2 at  6.0 sigma, b=1 at  +0.1 sigma)
+  inverse OLS(v|r_c)                               b =  3.96 +- 1.24   (b=2 at -1.6 sigma, b=1 at  +2.4 sigma)
+  bisector                                         b =  1.78 +- 0.16   (b=2 at  1.4 sigma, b=1 at  +4.9 sigma)
+  orthogonal                                       b =  3.28 +- 0.97   (b=2 at -1.3 sigma, b=1 at  +2.4 sigma)
+  R_max/r_c: median 3.3, 16-84% 1.7-5.8; N(>=3) = 46, N(>=5) = 18
+  R_max/r_c >= 3       N = 46: b = 0.83 +- 0.23 (b=2 at 5.1 sigma); bisector 1.70
+  R_max/r_c >= 5       N = 18: b = 1.12 +- 0.49 (b=2 at 1.8 sigma); bisector 2.01
+  v -> V_flat of P18 (N = 54): b = 0.74 +- 0.20 (b=2 at 6.2 sigma)
+  v -> V_flat of SPARC (Lelli et al. 2016b; N = 34): b = 0.36 +- 0.33 (b=2 at 4.9 sigma)
+seed 11: N=500 median 1.782 frac<=0.97 0.0000 min 1.105

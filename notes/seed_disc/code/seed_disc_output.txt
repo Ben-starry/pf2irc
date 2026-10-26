@@ -1,0 +1,10 @@
+lambda = 0.035, y = 50.5, r_c = 0.0198 R_b, R_max = 0.1492 R_b
+exponential fit (1-4 R_d): R_d = 0.0349 R_b = 0.234 R_max; R_d/r_c = 1.76
+Mo-Mao-White (j_d = 2 v R_d): R_d = 0.0249 R_b; R_d/r_c = 1.26; ratio 1.402
+half-mass radius: 1.265 R_d (exponential 1.678); edge R_max = 4.28 R_d
+R_d from the half-mass radius (R_half/1.678) = 0.0263 R_b; R_d/r_c = 1.33; ratio to MMW 1.057
+mass in R/R_d = 0-0.1, 0.1-0.25, 0.25-0.5: seed [0.017  0.055  0.1148]  exponential [0.0047 0.0218 0.0637]
+analytic flat-curve F(S) at S=0.1,0.3,0.6: [0.2332 0.5263 0.8148]  Monte Carlo (P18 curve): [0.1529 0.5062 0.822 ]
+R_d/r_c (seed fit 1-4 R_d / seed half-mass / MMW): 0.015:1.25/1.02/0.90 0.02:1.47/1.16/1.06 0.025:1.62/1.24/1.16 0.035:1.76/1.33/1.26 0.05:1.80/1.35/1.28 0.07:1.73/1.31/1.23 0.1:1.57/1.22/1.13
+d ln(R_d/r_c)/d ln lambda (seed, around 0.035): 0.16
+figure written: fig_seed_disc.png

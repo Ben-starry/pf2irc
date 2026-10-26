@@ -38,7 +38,7 @@ button:hover{border-color:var(--accent);color:var(--accent)}
 .pair figure{align-self:start}
 .pair{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:18px;min-width:0}
 @media (max-width:980px){.pair{grid-template-columns:minmax(0,1fr)}}
-.plots{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;min-width:0}
+.plots{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;min-width:0;align-content:start}
 figure{margin:0;background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:12px 12px 6px}
 figcaption{font-family:var(--display);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);padding:0 4px 6px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 canvas{display:block;width:100%;height:auto;max-width:100%}
@@ -67,7 +67,7 @@ footer code{font-family:var(--mono);font-size:12px}
 <div class="wrap">
 <header>
   <h1>Grow a Dwarf Galaxy</h1>
-  <p>Set the depth <i>v</i>, the spin λ, the moment the seed runs out and the shape exponent <i>n</i>. The model of <em>From a primordial fluctuation to an idealised rotation curve</em> returns the core at every epoch in four explicit steps and draws the idealised rotation curve today. Pick any of the 79 SPARC dwarfs of the paper and try to grow it; the list shows each galaxy’s best-fitting <i>n</i> and where growth must end (z<sub>end</sub>) at median spin. With <i>n</i> = 2 this is the paper’s P18 profile with a flat core; <i>n</i> &lt; 2 gives an inner cusp, ρ ∝ R<sup>α</sup> with slope α = n − 2 (−1 is the NFW cusp), shown in the density panel.</p>
+  <p>Set the flat speed <i>v</i>, the spin λ, the redshift at which growth ends and the profile exponent <i>n</i>. The model of <em>From a primordial fluctuation to an idealised rotation curve</em> returns the core at every epoch in four explicit steps and draws the idealised rotation curve today. Pick any of the 79 SPARC dwarfs of the paper and try to grow it; the list shows each galaxy’s best-fitting <i>n</i> (marked ~ where the fit does not constrain it) and where growth must end (z<sub>end</sub>) at median spin. With <i>n</i> = 2 this is the paper’s P18 profile with a flat core; <i>n</i> &lt; 2 gives an inner cusp, ρ ∝ R<sup>α</sup> with slope α = n − 2 (−1 is the NFW cusp), shown in the density panel.</p>
   <p class="eq">ρ(R) = v²/(4πGR²) · [1−(1−x)e<sup>−x</sup>]<sup>n</sup>,&nbsp; x = R/r<sub>c</sub>,&nbsp; r<sub>c</sub> = R<sub>b</sub>/y,&nbsp; c ln y + A y = c(1−3λ²−ε) − C<sub>E</sub></p>
   <nav class="links" aria-label="Paper, code and citation">
     <span>Paper: B. R. Parodi, A&amp;A (submitted)</span>
@@ -93,7 +93,8 @@ footer code{font-family:var(--mono);font-size:12px}
       <button id="setn" type="button">Take n from galaxy</button>
       <button id="solve" type="button">Solve end of growth</button>
     </div>
-    <p class="hint">The galaxy’s fitted v and r<sub>c</sub> follow the chosen n. z_end in the list is for λ = 0.035, ε = 0 and the current n. “Solve” finds the redshift at which growth must end, for the current λ and ε, to give the galaxy’s fitted core.</p>
+    <p class="hint">The galaxy’s fitted v and r<sub>c</sub> follow the chosen n. z_end in the list is for λ = 0.035, ε = 0 and the current n. “Solve” finds the redshift at which growth must end, for the current λ and ε, to give the galaxy’s fitted core. ~ before n: not constrained (error above 1 or at a bound of the fit); the paper uses the 49 constrained values.</p>
+    <p class="hint">Read z<sub>end</sub> with care: the assumed spin, a spin term not stored in the core, a profile with n = 1.76, or a core that keeps growing after growth ends move the median epoch within z ≈ 0.3–1.1, and the predicted spin dependence of the core is not seen in the data (paper, Sects. 6.4 and 6.5).</p>
     <div id="score" class="score" aria-live="polite"></div>
     <p class="hint" id="obs"></p>
   </section>
@@ -109,14 +110,14 @@ footer code{font-family:var(--mono);font-size:12px}
       <canvas id="c2" width="900" height="260" role="img" aria-label="Core radius against cosmic time"></canvas>
     </figure>
     <figure>
-      <figcaption><span>Density today</span><span class="key"><span class="sw"></span>n &nbsp;<span class="sw g"></span>n = 2 (core)</span></figcaption>
+      <figcaption><span>Density today</span><span class="key"><span class="sw"></span>current n &nbsp;<span class="sw g"></span>n = 2 (core)</span></figcaption>
       <canvas id="c3" width="600" height="420" role="img" aria-label="Density profile against radius, log-log, showing the central slope"></canvas>
     </figure>
     </div>
     <div class="read" id="read"></div>
   </div>
 </div>
-<footer>Flat ΛCDM with Ω<sub>m</sub> = 0.3, Ω<sub>Λ</sub> = 0.7, H<sub>0</sub> = 70 km s⁻¹ Mpc⁻¹. Growth law R<sub>b</sub> = v t<sub>acc</sub>/[(1+3π/2)(1+c<sub>Λ</sub>ℓ<sub>0</sub>)] with c<sub>Λ</sub> = 9.640. For exponent n the profile’s mass excess is c(n) = ∫(uⁿ−1)dx (¼ for n = 2, 0 for n = 1) and its energy constant C<sub>E</sub>(n) (−0.917 for n = 2); the core equation c ln y + A y = c(1−3λ²−ε) − C<sub>E</sub>, A = 3λ² + ε + ⅔ℓ, is solved with the Lambert W function. After growth r<sub>c</sub> ∝ (y + c)⁻¹. Galaxy fits: v and r<sub>c</sub> refitted for each n (errors as in the paper). The absolute core is reliable to about a factor 1.5. 
+<footer>Flat ΛCDM with Ω<sub>m</sub> = 0.3, Ω<sub>Λ</sub> = 0.7, H<sub>0</sub> = 70 km s⁻¹ Mpc⁻¹. Growth law R<sub>b</sub> = v t<sub>acc</sub>/[(1+3π/2)(1+c<sub>Λ</sub>ℓ<sub>0</sub>)] with c<sub>Λ</sub> = 9.640. For exponent n the profile’s mass excess is c(n) = ∫(uⁿ−1)dx (¼ for n = 2, 0 for n = 1) and its energy constant C<sub>E</sub>(n) (−0.917 for n = 2); the core equation c ln y + A y = c(1−3λ²−ε) − C<sub>E</sub>, A = 3λ² + ε + ⅔ℓ, is solved with the Lambert W function. After growth r<sub>c</sub> ∝ (y + c)⁻¹. Galaxy fits: v and r<sub>c</sub> refitted for each n (errors as in the paper). The absolute core is uncertain by a factor of about two; the scalings with v and epoch are not. 
 </footer>
 </div>
 <script>
@@ -162,7 +163,7 @@ function fillList(){const q=$('find').value.trim().toLowerCase(),k=$('sort').val
   const key={name:i=>GALS[i].name,v:i=>GALS[i].v,vr:i=>GALS[i].vr,z:i=>GALS[i].zend,n:i=>GALS[i].nbest}[k];
   idx.sort((a,b)=>{const x=key(a),y=key(b);return typeof x==='string'?x.localeCompare(y):x-y;});
   sel.innerHTML='';for(const i of idx){const g=GALS[i],o=document.createElement('option');o.value=i;
-    o.textContent=(g.name.padEnd(11)+g.v.toFixed(1).padStart(6)+g.rc.toFixed(2).padStart(5)+g.nbest.toFixed(2).padStart(5)+' '+zTxt(g.zend)).replace(/ /g,' ');sel.appendChild(o);}
+    o.textContent=(g.name.padEnd(11)+g.v.toFixed(1).padStart(6)+g.rc.toFixed(2).padStart(5)+((g.sn<1&&g.nbest>0.51&&g.nbest<3.99)?g.nbest.toFixed(2):'~'+g.nbest.toFixed(1)).padStart(5)+' '+zTxt(g.zend)).replace(/ /g,' ');sel.appendChild(o);}
   if(idx.includes(S.g))sel.value=S.g;$('nshow').textContent=idx.length+' of 79';}
 $('find').addEventListener('input',fillList);$('sort').addEventListener('change',fillList);
 {const o=document.createElement('option');o.value='n';o.textContent='sort: best n';$('sort').appendChild(o);}

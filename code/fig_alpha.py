@@ -1,5 +1,5 @@
 """Distribution of the central density slope alpha = n - 2 of the generalised
-IRC for the SPARC dwarfs with constrained n (Appendix B, Fig. B.2).
+IRC for the SPARC dwarfs with constrained n (Appendix G, Fig. G.1).
 Run from code/; uses fit_exponent.py."""
 import numpy as np, matplotlib
 matplotlib.use("Agg")

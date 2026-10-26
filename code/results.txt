@@ -1,0 +1,197 @@
+t0 = 13.4670 Gyr
+check E=0 shell: (4pi/3) rho_m0 R_bg(t0)^3 / M = 1.0000000000
+C_E = -0.9173696; x_p = 5.49577; y0 = 106.64
+Lambda=0 limit: xi_b = 0.174047, y = 50.5429 (expected 0.174047, 50.5429)
+Lambda=0: t_acc=8.426 Gyr: R_b=89.99 kpc, y=50.54, r_c=1.781 kpc, M_tot=7.5700e+10, edge turnaround R_ta=180.9 kpc at t=4.630 Gyr (z=1.34); ell_b = Lambda R_b^2/(3 v^2) = 0.0000
+Lambda-LTB: t_acc=8.426 Gyr: R_b=83.63 kpc, y=34.57, r_c=2.419 kpc, M_tot=7.0507e+10, edge turnaround R_ta=173.4 kpc at t=4.600 Gyr (z=1.35); ell_b = Lambda R_b^2/(3 v^2) = 0.0067
+  Lagrangian radius of outermost shell r_L = 744.5 kpc; r_L/R_b = 8.90; mean density/rho_m0 = 705
+  y asymptotic formula at t_acc: 34.58 (exact 34.57)
+  same M_tot with Lambda=0 would finish accretion at t=7.848 Gyr (z=0.586)
+  spin p=0.16: lambda=0.0213: y(Lambda=0) = 72.0, y(Lambda-LTB, R_b=84) = 41.1
+  spin p=0.5: lambda=0.0350: y(Lambda=0) = 50.5, y(Lambda-LTB, R_b=84) = 34.6
+  spin p=0.84: lambda=0.0575: y(Lambda=0) = 30.9, y(Lambda-LTB, R_b=84) = 25.0
+  pure-Lambda core (lambda->0): y = 46.6
+time line (Lambda-LTB | Lambda=0):
+  z=8: t=0.629  r_c=0.133 R_b=6.72 y=50.38 rho0=14.9784 v(1kpc)=61.0 | r_c=0.133 R_b=6.72 y=50.54
+  z=6: t=0.917  r_c=0.195 R_b=9.78 y=50.19 rho0=7.0108 v(1kpc)=61.1 | r_c=0.194 R_b=9.79 y=50.54
+  z=4: t=1.516  r_c=0.326 R_b=16.15 y=49.59 rho0=2.5126 v(1kpc)=59.6 | r_c=0.320 R_b=16.19 y=50.54
+  z=2: t=3.227  r_c=0.730 R_b=34.07 y=46.64 rho0=0.4994 v(1kpc)=48.4 | r_c=0.682 R_b=34.46 y=50.54
+  z=1: t=5.752  r_c=1.459 R_b=59.29 y=40.65 rho0=0.1252 v(1kpc)=33.1 | r_c=1.215 R_b=61.43 y=50.54
+  z=0.5: t=8.426  r_c=2.419 R_b=83.63 y=34.57 rho0=0.0455 v(1kpc)=22.9 | r_c=1.781 R_b=89.99 y=50.54
+  z=0: t=13.467  r_c=2.419 R_b=83.63 y=34.57 rho0=0.0455 v(1kpc)=22.9 | r_c=1.781 R_b=89.99 y=50.54
+rho(0)/rho_m(t) at z=6: 5.010e+05
+  Lambda correction to v_c^2 today at r=10 kpc: 0.0001
+  Lambda correction to v_c^2 today at r=50 kpc: 0.0024
+  Lambda correction to v_c^2 today at r=84 kpc: 0.0066
+primordial mean overdensity  delta(M,t) = (R_bg/R)^3 - 1  vs linear (3/5) v^2/(H^2 R^2):
+  z=1090: halted mass M_h=4.239e+06, turned-around up to 7.714e+06; delta(M_tot)=2.4350e-03 (linear 2.4341e-03); slope dln delta/dln M (outer half) = -0.6739
+  z=100: halted mass M_h=1.505e+08, turned-around up to 2.738e+08; delta(M_tot)=2.6820e-02 (linear 2.6718e-02); slope dln delta/dln M (outer half) = -0.7064
+  z=30: halted mass M_h=8.849e+08, turned-around up to 1.610e+09; delta(M_tot)=9.1848e-02 (linear 9.0680e-02); slope dln delta/dln M (outer half) = -0.7661
+  z=6: front R_b=9.78, edge R_e=92.1 kpc, density jump 6.57, rho_edge/rho_m = 1.152
+  z=3: front R_b=22.45, edge R_e=140.5 kpc, density jump 6.72, rho_edge/rho_m = 1.335
+  z=1.5: front R_b=44.01, edge R_e=172.7 kpc, density jump 7.04, rho_edge/rho_m = 1.791
+present core r_c/v [kpc per km/s] (Lambda-LTB | Lambda=0), spins 16/50/84%:
+  z_acc=2: LTB 0.0091(y=62.8) 0.0122(y=46.6) 0.0190(y=29.7) | L=0 0.0080(y=72.0) 0.0114(y=50.5) 0.0185(y=30.9)
+  z_acc=1: LTB 0.0194(y=51.1) 0.0243(y=40.7) 0.0357(y=27.6) | L=0 0.0142(y=72.0) 0.0203(y=50.5) 0.0330(y=30.9)
+  z_acc=0.5: LTB 0.0340(y=41.0) 0.0403(y=34.6) 0.0555(y=25.1) | L=0 0.0209(y=72.0) 0.0297(y=50.5) 0.0483(y=30.9)
+  z_acc=0.25: LTB 0.0475(y=35.3) 0.0546(y=30.7) 0.0721(y=23.2) | L=0 0.0261(y=72.0) 0.0371(y=50.5) 0.0604(y=30.9)
+explicit growth law: c_Lambda analytic = 9.6399 (tau1 = 55.0667); numerical d tau_h/d kappa at kappa=1e-4: 55.155
+  explicit law vs full Lambda-LTB (lambda 0.021-0.058, z 6-0): max |dR_b| = 0.0102, max |dr_c| = 0.0131
+scaling check (z_end=2, lambda=0.035): v=30: r_c/v=0.01217 y=46.644 M/v^3=1.3273e+05 rho0=0.4994; v=60: r_c/v=0.01217 y=46.644 M/v^3=1.3273e+05 rho0=0.4994; v=120: r_c/v=0.01217 y=46.644 M/v^3=1.3273e+05 rho0=0.4994; max rel. dev. of r_c/v 1.6e-13
+scaling check (z_end=0.5, lambda=0.035): v=30: r_c/v=0.04032 y=34.569 M/v^3=3.2642e+05 rho0=0.0455; v=60: r_c/v=0.04032 y=34.569 M/v^3=3.2642e+05 rho0=0.0455; v=120: r_c/v=0.04032 y=34.569 M/v^3=3.2642e+05 rho0=0.0455; max rel. dev. of r_c/v 6.6e-14
+Fig 3 (RC vs t): t = 0.50 Gyr, r_c = 0.106 kpc
+Fig 3 (RC vs t): t = 1.00 Gyr, r_c = 0.213 kpc
+Fig 3 (RC vs t): t = 2.00 Gyr, r_c = 0.435 kpc
+Fig 3 (RC vs t): t = 4.00 Gyr, r_c = 0.935 kpc
+Fig 3 (RC vs t): t = 8.43 Gyr, r_c = 2.419 kpc
+K0(q=0.2)=1.5968; today: rc=2.419 Rb=83.63 Rd=1.713 Rd/rc=0.708 Md=7.837e+08 Sigma0=42.5 Msun/pc2; BTF 47v^4=6.09e+08
+z=6: t=0.92 rc=0.195 Rd=0.138 Md=5.09e+06 Md/Mtot=0.0006 vd/v(2.2Rd)=0.145 | rho_tot(0)=7.0097 rho_h/rho_tot(R=0.02 r_c)=0.950 exact centre=0.947 min ratio=0.950 | PITS rho0=6.6397 Msun/pc3 rh=0.106 rh/rc=0.546 rho0*rh=707.0 Msun/pc2 | rms=1.85 max=3.95
+z=3: t=2.11 rc=0.461 Rd=0.326 Md=2.84e+07 Md/Mtot=0.0015 vd/v(2.2Rd)=0.223 | rho_tot(0)=1.2561 rho_h/rho_tot(R=0.02 r_c)=0.881 exact centre=0.876 min ratio=0.881 | PITS rho0=1.1077 Msun/pc3 rh=0.260 rh/rc=0.565 rho0*rh=288.5 Msun/pc2 | rms=1.76 max=3.76
+z=2: t=3.23 rc=0.730 Rd=0.517 Md=7.14e+07 Md/Mtot=0.0025 vd/v(2.2Rd)=0.280 | rho_tot(0)=0.4993 rho_h/rho_tot(R=0.02 r_c)=0.811 exact centre=0.803 min ratio=0.811 | PITS rho0=0.4082 Msun/pc3 rh=0.429 rh/rc=0.587 rho0*rh=175.0 Msun/pc2 | rms=1.67 max=3.56
+z=1: t=5.75 rc=1.459 Rd=1.033 Md=2.85e+08 Md/Mtot=0.0057 vd/v(2.2Rd)=0.396 | rho_tot(0)=0.1252 rho_h/rho_tot(R=0.02 r_c)=0.622 exact centre=0.606 min ratio=0.622 | PITS rho0=0.0822 Msun/pc3 rh=0.955 rh/rc=0.655 rho0*rh=78.5 Msun/pc2 | rms=1.47 max=3.12
+z=0: t=13.47 rc=2.419 Rd=1.713 Md=7.84e+08 Md/Mtot=0.0111 vd/v(2.2Rd)=0.510 | rho_tot(0)=0.0455 rho_h/rho_tot(R=0.02 r_c)=0.374 exact centre=0.347 min ratio=0.374 | PITS rho0=0.0216 Msun/pc3 rh=1.866 rh/rc=0.771 rho0*rh=40.3 Msun/pc2 | rms=1.31 max=2.75
+Seed as a density perturbation (M_tot):
+  z=6: t=0.917 Gyr z=6.00: <delta>_seed=0.538, delta_lin=0.379, <delta>_gal=148.9, rho_seed=2.155e-05, rho_bg=1.401e-05 Msun/pc^3
+  z=2: t=3.227 Gyr z=2.00: <delta>_seed=2.472, delta_lin=0.872, <delta>_gal=156.1, rho_seed=3.825e-06, rho_bg=1.103e-06 Msun/pc^3
+  edge turnaround: t=4.600 Gyr z=1.35: <delta>_seed=5.125, delta_lin=1.098, <delta>_gal=164.5, rho_seed=3.226e-06, rho_bg=5.268e-07 Msun/pc^3
+  t_acc: t=8.426 Gyr z=0.50: <delta>_seed=207.999, delta_lin=1.600, <delta>_gal=208.0, rho_seed=2.878e-05, rho_bg=1.377e-07 Msun/pc^3
+  today: t=13.467 Gyr z=-0.00: <delta>_seed=704.373, delta_lin=2.069, <delta>_gal=704.4, rho_seed=2.878e-05, rho_bg=4.080e-08 Msun/pc^3
+  minimum of rho_seed at t=4.598 Gyr (edge turnaround 4.600 Gyr)
+  <delta>_seed = 1 at t=1.721 Gyr, z=3.59
+  Lambda=0 growing-galaxy overdensity 1+<delta> = 4.5(1+1/(4y))/xi_b^2 = 149.3
+Larger scales (Planck background, H_global = 67.4 km/s/Mpc):
+  2E/(H0 R_bg)^2=-0.40: delta_0=+1.117  H_loc=56.1  (linear 54.1)
+  2E/(H0 R_bg)^2=-0.20: delta_0=+0.394  H_loc=63.0  (linear 62.7)
+  2E/(H0 R_bg)^2=-0.10: delta_0=+0.171  H_loc=65.4  (linear 65.4)
+  2E/(H0 R_bg)^2=+0.00: delta_0=+0.000  H_loc=67.4  (linear 67.4)
+  2E/(H0 R_bg)^2=+0.10: delta_0=-0.134  H_loc=69.0  (linear 69.0)
+  2E/(H0 R_bg)^2=+0.20: delta_0=-0.241  H_loc=70.4  (linear 70.3)
+  2E/(H0 R_bg)^2=+0.40: delta_0=-0.399  H_loc=72.6  (linear 72.2)
+  H_loc = 73.0 needs delta_0 = -0.430 (linear theory -0.471); f = Om^0.55 = 0.530
+Three radii at z=2: R_b=34.1, R_ta=123.8, R_e=163.9 kpc; edge turnaround t=4.60 Gyr, R_ta=173.4
+Early compact cores (Lambda = 0 formulas):
+  fiducial seed: delta_lin,0 = 2.07, sigma(M_tot) = 3.09, nu = 0.67
+  z=6, lambda=0.035: y=50.5, rho(0)=7.1 Msun/pc^3, r_c[pc] for v=30/60/100/200: 97 / 194 / 323 / 646; M_gal = 1.0e+09 / 8.2e+09 / 3.8e+10 / 3.1e+11
+  z=6, lambda=0.021: y=72.5, rho(0)=14.6 Msun/pc^3, r_c[pc] for v=30/60/100/200: 67 / 135 / 225 / 450; M_gal = 1.0e+09 / 8.2e+09 / 3.8e+10 / 3.0e+11
+  z=6, lambda=0.01: y=95.1, rho(0)=25.1 Msun/pc^3, r_c[pc] for v=30/60/100/200: 51 / 103 / 172 / 343; M_gal = 1.0e+09 / 8.2e+09 / 3.8e+10 / 3.0e+11
+  turnaround by t=0.3 Gyr (z=13.8): (v, nu) for M=1e9/1e10/1e11: (35, 2.6) / (76, 3.2) / (164, 4.1)
+  turnaround by t=0.5 Gyr (z=9.5): (v, nu) for M=1e9/1e10/1e11: (30, 1.8) / (64, 2.3) / (138, 2.9)
+  turnaround by t=0.9 Gyr (z=6.1): (v, nu) for M=1e9/1e10/1e11: (24, 1.2) / (53, 1.5) / (114, 2.0)
+Core equation m(y)(1-3 lam^2) = int_0^y m m'/x dx for two profiles (Lambda = 0):
+  Parodi: y for lambda = 0 / 0.021 / 0.035 / 0.058: 106.6 / 72.5 / 50.5 / 30.6
+  PITS: y for lambda = 0 / 0.021 / 0.035 / 0.058: none / none / 3148.1 / 963.1
+Evolving dark energy (w0=-0.75, wa=-0.8): effective Lambda/3 at z=0.5 is 1.168 x constant; r_c = 2.472 kpc vs 2.415 kpc (change +2.3%), y = 33.3 vs 34.6
+Phase III: e_SN/(v^2/2) = 279; eps = 279 f_c dM*/M_tot
+  z_acc=0.5, eps0=0.0000: today R_b=83.63 y=34.6 r_c=2.419 kpc rho0=0.0455 Msun/pc^3
+  z_acc=0.5, eps0=0.0020: today R_b=83.55 y=30.7 r_c=2.724 kpc rho0=0.0359 Msun/pc^3
+  z_acc=0.5, eps0=0.0050: today R_b=83.45 y=26.4 r_c=3.155 kpc rho0=0.0268 Msun/pc^3
+  z_acc=0.5, eps0=0.0100: today R_b=83.28 y=21.8 r_c=3.824 kpc rho0=0.0182 Msun/pc^3
+  z_acc=1.0, eps0=0.0000: today R_b=59.29 y=40.7 r_c=1.458 kpc rho0=0.1253 Msun/pc^3
+  z_acc=1.0, eps0=0.0091: today R_b=59.05 y=24.4 r_c=2.419 kpc rho0=0.0455 Msun/pc^3
+  disc ceiling r_c,max = 3.705 kpc reached for eps0 = 0.0091 (z_acc=0.5)
+  eps0=0.0: halo share of central density = +0.347
+  eps0=0.002: halo share of central density = +0.265
+  eps0=0.005: halo share of central density = +0.149
+  eps0=0.01: halo share of central density = -0.032
+SPARC, 79 late-type galaxies of Parodi (2018): log(rho/v^2) = a + b log r   [Msun/pc^3, km/s, kpc]
+  total mass, Parodi profile rho(0) vs r_c: N=79, bisector slope -2.000 +- 0.000, intercept -4.131 +- 0.000 (OLS y|x -2.000, OLS x|y -2.000), scatter 0.000 dex
+  Burkert halo (Table B.2) rho_0 vs r_0, v = Parodi v: N=79, bisector slope -1.821 +- 0.062, intercept -4.229 +- 0.029 (OLS y|x -1.769, OLS x|y -1.877), scatter 0.159 dex
+  Burkert halo, 54 galaxies with v = v_flat (Table B.3): N=54, bisector slope -1.881 +- 0.056, intercept -4.203 +- 0.031 (OLS y|x -1.840, OLS x|y -1.924), scatter 0.121 dex
+  check, joint OLS on the 54 (Parodi 2018/2023 form): log rho0 = -1.839 log r0 +1.996 log v_flat -4.211
+  halo share v_h,max^2/v^2 vs r_0: OLS slope +0.231 +- 0.063, corr +0.47
+  baryon share max V_bar^2/v^2 vs r_0: OLS slope -0.198 +- 0.103, corr -0.25
+  disc central surface brightness vs r_c: OLS slope -0.417 +- 0.160, corr -0.31
+  Upsilon (Table B.2) vs r_0: slope +0.035
+  halo share at fixed v: log share = +0.175(+-0.075) log r_0 +0.195(+-0.146) log v + const
+  baryon share at fixed v: log share = -0.062(+-0.119) log r_0 -0.471(+-0.262) log v + const
+  rho_0,Bu/rho(0) vs r_c: slope +0.259, corr +0.30, median 0.62
+  median v = 72.7 km/s, median r_c = 2.38 kpc, median chi2_r = 0.23; median r_0/r_c = 1.27
+  doubly normalised RC: 964 points, rms(V/v - model) = 0.040, median |dev| = 0.019, median error = 0.058; rms for R > r_c: 0.036
+  log r_c vs log v: OLS slope +1.020 +- 0.173 (model: +1), corr +0.51, scatter 0.29 dex
+  log rho(0) vs log v: OLS slope -0.040 +- 0.339 (model: 0), corr -0.01, scatter 0.59 dex
+  r_c/v [kpc per km/s]: 16/50/84% = 0.0162 0.0349 0.0547; rho(0) median 0.0609 Msun/pc^3
+  surface density total rho(0) r_c: median 144 Msun/pc^2 (16/84% 86/329), <log> 2.20 +- 0.34 dex; slope vs log v +0.98 +- 0.17 (model +1), corr +0.49, scatter about fit 0.29 dex
+  surface density Burkert halo rho_0 r_0 (Parodi 2018): median 105 Msun/pc^2 (16/84% 60/258), <log> 2.05 +- 0.34 dex; slope vs log v +1.12 +- 0.20 (model +1), corr +0.56, scatter about fit 0.28 dex
+  model Sigma at v=73 km/s, growth ends z=2: 444 Msun/pc^2 (median spin)
+  model Sigma at v=73 km/s, growth ends z=1: 222 Msun/pc^2 (median spin)
+  model Sigma at v=73 km/s, growth ends z=0.5: 134 Msun/pc^2 (median spin)
+  model Sigma at v=73 km/s, growth ends z=0.25: 99 Msun/pc^2 (median spin)
+distribution of log(r_c/v):
+  observed: mean -1.495, std 0.293 dex; median measurement error 0.083 dex
+  spin alone (sigma_ln lambda=0.5) at z_end=0.80: width 0.134 dex; d log(r_c/v)/d log t at median spin, z=0.5: 1.36
+  max likelihood, single epoch + spin + errors, no extra scatter: z_end = 1.30, lnL=-83.0, KS p = 0.000
+  with extra scatter: z_end = 0.80 (range 0.75-0.85), sigma_extra = 0.24 dex (range 0.22-0.26), Delta lnL = 67.8, KS p = 0.056
+  extra scatter as spread in end time: sigma_log t = 0.18 dex, i.e. t_end within x1.50
+  KS with refitted parameters (parametric bootstrap, 300 samples): D_obs = 0.148, calibrated p = 0.000 (naive p = 0.056)
+  model 16/50/84% of r_c/v at z_end=0.25 (spin + median error): 0.0439 0.0564 0.0775
+  model 16/50/84% of r_c/v at z_end=0.5 (spin + median error): 0.0318 0.0415 0.0590
+  model 16/50/84% of r_c/v at z_end=1.0 (spin + median error): 0.0184 0.0249 0.0375
+systematics: 34 of 79 with SPARC distance errors; median sigma_D 0.079 dex (16/84 0.021/0.114), inclination proxy e_logVf median 0.030; median total error of log(r_c/v): fit 0.083 -> with systematics 0.125 dex; rms systematic 0.092 dex
+  ML with systematics: z_end = 0.80 (0.75-0.85), extra scatter 0.22 dex (0.20-0.25); as spread in end time sigma_log t = 0.16 dex (x1.45); subsample with measured errors (N=34): fit errors only z=0.80 extra 0.22, with systematics z=0.80 extra 0.19 (0.16-0.23)
+  share of observed variance of log r_c about the v-fit explained by fit+systematic errors: 0.43; of log rho(0) (sigma = sqrt(4 sD^2+4 si^2+...)): 0.64; x-error attenuation of the r_c-v slope (median errors): 0.938; median-based share for log r_c: 0.18
+ML regression (errors in both, fit covariance, D and i systematics, intrinsic scatter): log r_c = 0.946 +- 0.184 log v, intrinsic scatter 0.260 +- 0.034 dex; log rho(0): slope +0.103 +- 0.376, intrinsic 0.520 dex; median fit correlation of (ln v, ln r_c) +0.85; constant-Sigma (slope 2) excluded at 5.7 sigma
+thin vs spherical stellar disc: V_disk^2/(G M_*(<R)/R) median per galaxy 1.17 (16/84 1.08/1.29); refit: v ratio [0.935 0.983 0.997], r_c ratio [0.8   0.953 1.023]; shape rms 0.042; slope r_c-v 1.028; median shift log(r_c/v) -0.010 dex
+mu0 face-on from SPARC profiles: median 20.21; P18 - this: median -0.54 mag, 16/84 -1.43/-0.01
+  log S0 vs mu0[3.6]: slope -0.148 +- 0.032, corr -0.60
+  log S0 vs log grad v(R_d) (Parodi 2018): slope +0.965 +- 0.096, corr +0.83
+  log rho(0) vs mu0[3.6]: slope -0.296 +- 0.068, corr -0.60
+  HSB (C>1): N=41, median S0=39.8 km/s/kpc, rho(0)=0.088 Msun/pc^3, r_c/v=0.0290, v=79.9
+  LSB (C<1): N=38, median S0=26.5 km/s/kpc, rho(0)=0.039 Msun/pc^3, r_c/v=0.0437, v=63.3
+  S0 percentiles 16/50/84: 21.1 33.1 71.2 km/s/kpc
+  inner gradient predicted by the IRC fitted without the two innermost points: N=75, median S_in = 25.7 km/s/kpc, median S_in/S_pred = 0.999, rms log ratio 0.090, corr(log) 0.93, range of S_in 5-117; median x of the points 0.41; S_in/(v/r_c) median 0.837 (URC: 1.155 at x=0)
+  significance: Pearson r(mu0, log S0) = -0.60, p = 5.2e-09; HSB vs LSB S0 Mann-Whitney p = 1.2e-03
+  profile comparison, all fitted to the TOTAL rotation curve V_obs (2 free parameters each, same errors):
+    URC      sum chi2 =  388.6 for 806 dof, median chi2/dof 0.23, lowest chi2 in 21/79; held-out inner gradient: median obs/pred 1.00, rms 0.090 dex; URC chi2 lower in 0/79
+    PITS     sum chi2 =  377.7 for 806 dof, median chi2/dof 0.24, lowest chi2 in 17/79; held-out inner gradient: median obs/pred 0.98, rms 0.094 dex; URC chi2 lower in 48/79
+    Burkert  sum chi2 =  480.2 for 806 dof, median chi2/dof 0.23, lowest chi2 in 32/79; held-out inner gradient: median obs/pred 1.04, rms 0.093 dex; URC chi2 lower in 41/79
+    NFW      sum chi2 =  964.6 for 806 dof, median chi2/dof 0.60, lowest chi2 in 9/79; held-out inner gradient: median obs/pred 0.83, rms 0.100 dex; URC chi2 lower in 65/79
+disc vs core: R_d/r_c median 0.669, 16/84% 0.349/1.324, scatter 0.296 dex; corr with log v r=-0.15 p=0.18
+  log(R_d/v) vs log(r_c/v): r=0.51 p=1.9e-06, OLS slope 0.52, bisector 1.02 +- 0.09
+  model (f_j=1, z_end=0.80, epoch spread 0.18 dex, errors 0.08/0.10 dex): median R_d/r_c 0.865, scatter 0.183 dex, r=0.79, bisector 1.04; implied f_j = 0.77
+  null (r_c = R_b/38.4): median R_d/r_c 0.928, scatter 0.250 dex, implied f_j 0.72; fraction above 1.27 f_j: data 0.32 (model f_j) / 0.37 (null f_j), model MC 0.15, null MC 0.29; KS data vs model p=0.01, vs null p=0.64
+compactness: log(v/r_c) vs log C r=+0.50 p=2.2e-06; vs mu0 r=-0.60 p=5.2e-09; C vs mu0 Spearman -0.89
+  partial: C after mu0 r=-0.06 p=0.59; mu0 after C r=-0.16 p=0.17; median v/r_c HSB 34.5, LSB 22.9; R_d/r_c vs C Spearman +0.00 p=0.98
+inversion with f_j=0.77, eps=0: solved 50/79; lambda median 0.028 (16/84 0.013/0.038), sigma_ln lambda 1.08; z_acc median 0.53
+inversion with f_j=0.60, eps=0: solved 43/79; lambda median 0.034 (16/84 0.015/0.054), sigma_ln lambda 0.96; z_acc median 0.49
+  bound: ell=0.0: max lambda*y = 1.802 at lambda = 0.046 -> R_d/r_c <= 1.27 f_j
+  bound: ell=0.0067: max lambda*y = 1.472 at lambda = 0.075 -> R_d/r_c <= 1.04 f_j
+  largest R_d/r_c: NGC4214 1.88 (r_c=0.27), UGC09992 2.04 (r_c=0.51), UGC06628 2.34 (r_c=1.20), UGCA281 4.08 (r_c=0.42)
+Phase I profile: P jump at front = 6.741, P_out(xi->inf)*6pi = 1.0000
+  OOS profile comparison (T<=7 no bulge, N=62, 1147 dof):
+    URC      sum chi2 =  1657.9, median chi2/dof 0.57, lowest in 18/62; median Delta chi2 vs P18 +0.00, P18 better by >2 in 0, worse by >2 in 0; by >6: 0/0; held-out gradient obs/pred 1.03, rms 0.093 dex
+    PITS     sum chi2 =  1824.7, median chi2/dof 0.68, lowest in 10/62; median Delta chi2 vs P18 +0.77, P18 better by >2 in 24, worse by >2 in 8; by >6: 13/4; held-out gradient obs/pred 0.97, rms 0.106 dex
+    Burkert  sum chi2 =  2532.5, median chi2/dof 0.59, lowest in 20/62; median Delta chi2 vs P18 +1.02, P18 better by >2 in 28, worse by >2 in 10; by >6: 16/5; held-out gradient obs/pred 1.13, rms 0.111 dex
+    NFW      sum chi2 =  2185.5, median chi2/dof 1.10, lowest in 14/62; median Delta chi2 vs P18 +4.73, P18 better by >2 in 33, worse by >2 in 13; by >6: 29/11; held-out gradient obs/pred 0.84, rms 0.106 dex
+  OOS profile comparison (T<=7 with bulge, N=32, 1077 dof):
+    URC      sum chi2 =  2586.5, median chi2/dof 1.31, lowest in 10/32; median Delta chi2 vs P18 +0.00, P18 better by >2 in 0, worse by >2 in 0; by >6: 0/0; held-out gradient obs/pred 1.16, rms 0.167 dex
+    PITS     sum chi2 =  2497.2, median chi2/dof 1.53, lowest in 7/32; median Delta chi2 vs P18 +2.83, P18 better by >2 in 18, worse by >2 in 7; by >6: 12/4; held-out gradient obs/pred 1.04, rms 0.155 dex
+    Burkert  sum chi2 =  8406.3, median chi2/dof 3.49, lowest in 5/32; median Delta chi2 vs P18 +61.02, P18 better by >2 in 25, worse by >2 in 6; by >6: 24/5; held-out gradient obs/pred 1.40, rms 0.265 dex
+    NFW      sum chi2 =  3570.2, median chi2/dof 1.74, lowest in 10/32; median Delta chi2 vs P18 +3.56, P18 better by >2 in 17, worse by >2 in 12; by >6: 14/11; held-out gradient obs/pred 1.14, rms 0.154 dex
+OOS Defining sample ($T\ge8$): N=79, v_med=73, rms=0.040, err_med=0.058, frac chi2r>2=0.01, held-out S_in/S_pred=1.00 rms 0.090 dex, v/r_c=28.7
+OOS $T\le7$, all: N=94, v_med=171, rms=0.063, err_med=0.043, frac chi2r>2=0.19, held-out S_in/S_pred=1.08 rms 0.129 dex, v/r_c=85.7
+OOS $T\le7$, no bulge: N=62, v_med=134, rms=0.047, err_med=0.047, frac chi2r>2=0.15, held-out S_in/S_pred=1.03 rms 0.093 dex, v/r_c=55.9
+OOS $T\le7$, no bulge, $v\le130$: N=29, v_med=98, rms=0.050, err_med=0.054, frac chi2r>2=0.10, held-out S_in/S_pred=1.09 rms 0.088 dex, v/r_c=46.5
+OOS $T\le7$, with bulge: N=32, v_med=220, rms=0.078, err_med=0.039, frac chi2r>2=0.28, held-out S_in/S_pred=1.16 rms 0.167 dex, v/r_c=361.4
+OOS matched v 40-130: defining N=61 r_c/v med 0.0353 (z_end 0.63); bulgeless T<=7 N=29 r_c/v med 0.0215 (z_end 1.16); ratio 1.64; Mann-Whitney p=2.3e-04; T<=7 slope r_c-v 0.93 +- 0.44; T of these: [0, 0, 0, 1, 0, 3, 10, 15]
+v/r_c vs v (all fitted SPARC galaxies): 20-60: N=20 median 31; 60-100: N=56 median 31; 100-150: N=32 median 43; 150-200: N=20 median 88; 200-400: N=22 median 239; Spearman all +0.59 (p=3e-15), dwarfs -0.02, slope dwarfs -0.02
+Dissipation (y=38.4, z_end=0.8): M_bar/M_tot 16/50/84 = [0.0052 0.0168 0.0409]; kappa = [1.94 2.63 3.28]; eps_diss = [-0.177 -0.085 -0.032]; eps_diss/(3 lam^2) median = 23
+  feedback per unit f_c: eps_fb = [0.24  0.648 4.007]; coupling for balance f_c = [0.027 0.098 0.26 ]; slopes vs v: |eps_diss| -0.55, eps_fb/f_c -2.54
+  core equation solvable for A<0 only if |A| <= e^(-1-4B)/4 = 8.66e-04: net loss <= 3lam^2+0.00087 = 0.0045; y_max there = 289
+degeneracy: DDO154 growth ending at z=1.0 (r_c=1.20) plus eps rising linearly to 0.0079 gives r_c=1.89 today
+grown galaxies: DDO154 v=48.8 rc=1.89 -> z_acc=0.545 (t=8.11 Gyr), chi2/N of IRC=0.91
+degeneracy: NGC2915 growth ending at z=2.0 (r_c=1.00) plus eps rising linearly to 0.0040 gives r_c=1.38 today
+grown galaxies: NGC2915 v=81.6 rc=1.38 -> z_acc=1.480 (t=4.25 Gyr), chi2/N of IRC=0.26
+resolution/distance: Spearman log(v/rc)-D -0.25 (p=0.024), -R1 -0.28 (p=0.014); log rc = a + b log v + c log D: b=0.84+-0.20, c=0.23+-0.09; fraction rc<2R1 0.23
+  all: N=79 r_c ~ v^1.02+-0.18, median v/rc 28.7, std log(v/rc) 0.293, Spearman q-D -0.25
+  rc>2R1: N=61 r_c ~ v^1.13+-0.19, median v/rc 27.7, std log(v/rc) 0.233, Spearman q-D -0.22
+  rc>3R1: N=49 r_c ~ v^1.19+-0.22, median v/rc 25.8, std log(v/rc) 0.230, Spearman q-D -0.24
+  D<10Mpc: N=43 r_c ~ v^0.87+-0.28, median v/rc 29.2, std log(v/rc) 0.328, Spearman q-D -0.01
+  rc>2R1&D<10: N=38 r_c ~ v^1.10+-0.26, median v/rc 28.5, std log(v/rc) 0.241, Spearman q-D -0.13
+ML with log D covariate: b=0.77+-0.22, c=0.21+-0.09
+  ML all: N=79 r_c ~ v^0.95+-0.18, intrinsic 0.26 dex; constant Sigma excluded at 5.9 sigma
+  ML rc>2R1: N=61 r_c ~ v^0.99+-0.26, intrinsic 0.21 dex; constant Sigma excluded at 3.9 sigma
+  ML rc>3R1: N=49 r_c ~ v^1.00+-0.33, intrinsic 0.20 dex; constant Sigma excluded at 3.1 sigma
+  ML D<10Mpc: N=43 r_c ~ v^0.85+-0.24, intrinsic 0.30 dex; constant Sigma excluded at 4.8 sigma
+RAR: outer g_bar/g_dag median 0.038; R_last/r_c median 3.33; Sigma_M = g_dag/(2 pi G) = 137.0 Msun/pc^2; RAR excess (M_b = v^4/G g_dag) / (v^2 r_c/4G): median 1.05 (16/84 0.63/2.40)
+  free-c fits: observed curves median c -0.01, median error 4.3; RAR curves median c +0.10, median error 28.9
+  Sigma(v) from LSQ line at v = 40, 73, 130 km/s: 93, 169, 297

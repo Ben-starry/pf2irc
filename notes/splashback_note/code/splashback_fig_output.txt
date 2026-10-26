@@ -1,0 +1,4 @@
+steepest drop of dM/dxi outside the front at xi = 0.204 (slope of rho -4.5) = 0.321 r_ta,now
+splashback (radius enclosing 99% of the orbiting mass): r_sp = 0.276 +- 0.009 vt = 0.434 r_ta,now = 1.58 R_b
+fraction of orbiting mass (t > 2 t_ta) outside the front xi_b: 0.154 +- 0.016
+figure: fig_splashback.png

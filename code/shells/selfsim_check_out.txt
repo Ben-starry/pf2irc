@@ -1,0 +1,36 @@
+# driver2.py runs (N=3000, Mmin=1e-4, soft=2e-4, eta_dt=0.03), rerun 2026-10-26; fig_shells.png reproduced bit for bit
+== seed035: 16 snapshots, t/t_ta(outer) = 0.70-1.00
+  front xi_f per snapshot: 0.224 0.224 0.224 0.224 0.224 0.224 0.224 0.224 0.224 0.224 0.224 0.224 0.224 0.224 0.224 0.224
+  inner rho slope (xi 0.002-0.01) per snapshot: -2.08 -2.48 -2.27 -2.58 -2.42 -2.78 -2.45 -2.17 -2.43 -2.23 -2.34 -2.24 -2.34 -2.65 -2.62 -2.27
+  xi 0.001-0.01: rms of log mu among snapshots 0.086 dex; last 4 minus first 4 snapshots -0.019 dex
+  xi 0.01-0.1: rms of log mu among snapshots 0.056 dex; last 4 minus first 4 snapshots -0.006 dex
+  xi 0.1-0.3: rms of log mu among snapshots 0.036 dex; last 4 minus first 4 snapshots -0.033 dex
+  shells inside xi=1e-3 at the last snapshot: 291; inside xi_b/y=3.5e-3: 733; mass inside 1e-3: 0.0057
+== seed07: 16 snapshots, t/t_ta(outer) = 0.70-1.00
+  front xi_f per snapshot: 0.224 0.224 0.224 0.224 0.224 0.224 0.224 0.224 0.141 0.141 0.112 0.089 0.112 0.112 0.224 0.224
+  inner rho slope (xi 0.002-0.01) per snapshot: -2.27 -2.52 -2.28 -2.28 -2.39 -2.42 -2.32 -2.14 -2.50 -2.17 -2.24 -2.16 -2.14 -2.21 -2.28 -2.49
+  xi 0.001-0.01: rms of log mu among snapshots 0.084 dex; last 4 minus first 4 snapshots +0.005 dex
+  xi 0.01-0.1: rms of log mu among snapshots 0.068 dex; last 4 minus first 4 snapshots +0.020 dex
+  xi 0.1-0.3: rms of log mu among snapshots 0.070 dex; last 4 minus first 4 snapshots -0.075 dex
+  shells inside xi=1e-3 at the last snapshot: 509; inside xi_b/y=3.5e-3: 1110; mass inside 1e-3: 0.0047
+== f03: 16 snapshots, t/t_ta(outer) = 0.70-1.00
+  front xi_f per snapshot: 0.224 0.224 0.071 0.178 0.178 0.141 0.141 0.178 0.112 0.112 0.141 0.141 0.224 0.224 0.224 0.224
+  inner rho slope (xi 0.002-0.01) per snapshot: -2.07 -2.12 -2.13 -2.14 -2.23 -2.65 -2.19 -2.37 -2.03 -2.31 -2.00 -2.23 -2.20 -2.09 -2.16 -2.38
+  xi 0.001-0.01: rms of log mu among snapshots 0.077 dex; last 4 minus first 4 snapshots -0.029 dex
+  xi 0.01-0.1: rms of log mu among snapshots 0.075 dex; last 4 minus first 4 snapshots -0.039 dex
+  xi 0.1-0.3: rms of log mu among snapshots 0.067 dex; last 4 minus first 4 snapshots -0.025 dex
+  shells inside xi=1e-3 at the last snapshot: 682; inside xi_b/y=3.5e-3: 1308; mass inside 1e-3: 0.0041
+== f06: 16 snapshots, t/t_ta(outer) = 0.70-1.00
+  front xi_f per snapshot: 0.089 0.112 0.178 0.178 0.178 0.178 0.178 0.089 0.071 0.071 0.071 0.178 0.178 0.089 0.112 0.089
+  inner rho slope (xi 0.002-0.01) per snapshot: -1.84 -2.02 -2.04 -1.92 -2.02 -1.82 -1.95 -1.81 -1.76 -1.94 -1.78 -1.92 -1.82 -2.02 -1.93 -2.16
+  xi 0.001-0.01: rms of log mu among snapshots 0.062 dex; last 4 minus first 4 snapshots -0.023 dex
+  xi 0.01-0.1: rms of log mu among snapshots 0.105 dex; last 4 minus first 4 snapshots -0.037 dex
+  xi 0.1-0.3: rms of log mu among snapshots 0.092 dex; last 4 minus first 4 snapshots -0.000 dex
+  shells inside xi=1e-3 at the last snapshot: 966; inside xi_b/y=3.5e-3: 1463; mass inside 1e-3: 0.0031
+== f10: 16 snapshots, t/t_ta(outer) = 0.70-1.00
+  front xi_f per snapshot: 0.178 0.178 0.178 0.178 0.178 0.178 0.178 0.178 0.178 0.178 0.178 0.178 0.178 0.178 0.178 0.178
+  inner rho slope (xi 0.002-0.01) per snapshot: -2.03 -2.03 -2.14 -2.14 -2.09 -2.03 -1.99 -2.15 -2.10 -2.04 -2.05 -2.03 -2.05 -2.04 -2.00 -2.08
+  xi 0.001-0.01: rms of log mu among snapshots 0.040 dex; last 4 minus first 4 snapshots -0.000 dex
+  xi 0.01-0.1: rms of log mu among snapshots 0.013 dex; last 4 minus first 4 snapshots -0.013 dex
+  xi 0.1-0.3: rms of log mu among snapshots 0.016 dex; last 4 minus first 4 snapshots -0.037 dex
+  shells inside xi=1e-3 at the last snapshot: 1022; inside xi_b/y=3.5e-3: 1449; mass inside 1e-3: 0.0024

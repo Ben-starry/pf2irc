@@ -1,0 +1,12 @@
+EdS: max relative difference cycloid vs delta equation up to eta=1.9 pi: 2.4e-08
+  turnaround eta=1.00 pi: 1+delta =    5.552, delta_lin = 1.062
+  halting    eta=1.50 pi: 1+delta =  146.841, delta_lin = 1.583
+  collapse   eta=2 pi:    1+delta -> inf,      delta_lin = 1.686
+  halting value (9/2)(1+3pi/2)^2 = 146.84; top-hat virial 18 pi^2 = 177.7
+LCDM (Om=0.3): age t0 = 0.9641/H0, Lambda = 2.10 H0^2
+turnaround threshold: delta_i = 2.8515e-03 at a_i = 1.890e-03  (delta_i/a_i = 1.5088); maximum turnaround radius (3GM/Lambda)^(1/3) = 0.5984 (comoving 1 -> a)
+  collapses early      delta_i/delta_thr=3.00: max rel. difference R-picture vs delta-picture 1.4e-07; t_ta = 0.142/H0
+  collapses late       delta_i/delta_thr=1.15: max rel. difference R-picture vs delta-picture 3.9e-07; t_ta = 0.809/H0
+  never turns around   delta_i/delta_thr=0.85: max rel. difference R-picture vs delta-picture 1.7e-08; t_ta = nan/H0 (none)
+  non-turning shell: 1+delta at t = 4, 6, 8 /H0: 22.910, 23.556, 23.580
+figure: fig_tophat.png

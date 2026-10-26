@@ -548,9 +548,9 @@ a.text(2.2, 8, "galaxy", fontsize=9, color=C2)
 a.text(6.0, 115, "falling\nshells", fontsize=8.5, color="0.35", ha="center")
 a.annotate("expanding shells", (1.5, 100), (0.3, 186), fontsize=8.5, color="0.35", ha="left",
            arrowprops=dict(arrowstyle="->", color="0.5", lw=0.6))
-a.set_xlim(0, 13.5); a.set_ylim(0, 200)
+a.set_xlim(0, 13.5); a.set_ylim(0, 300); a.set_yticks([0, 50, 100, 150, 200])
 a.set_xlabel(r"cosmic time $t$ [Gyr]"); a.set_ylabel(r"areal radius $R$ [kpc]")
-a.legend(frameon=False, fontsize=7, loc="upper right", bbox_to_anchor=(1.0, 0.81))
+a.legend(frameon=False, fontsize=7, loc="upper right", labelspacing=0.3, borderaxespad=0.3)
 # snapshot at z = 2
 b = ax[1]; tS = t_of_z(2)
 RbS = front_at(tS)[0]; RtaS = float(np.interp(tS, tta3, Rta3)); ReS = R_shell(MTOT, tS)
@@ -567,7 +567,6 @@ for R, lab, c in [(RbS, r"$R_b$", C2), (RtaS, r"$R_{\rm ta}$", C5), (ReS, r"$R_e
     if c == C5: b.text(-R*0.55, R*0.55, lab, fontsize=9, color=c, ha="center", va="center")
     else: b.annotate(lab, (R*0.707, R*0.707), (R*0.707+8, R*0.707+8), fontsize=9, color=c)
 lim = ReS*1.3; b.set_xlim(-lim, lim); b.set_ylim(-lim, lim); b.set_aspect("equal"); b.axis("off")
-b.set_title(f"snapshot at $z=2$ ($t={tS:.1f}$ Gyr)", fontsize=9)
 fig.savefig("fig9_three_radii.png", dpi=DPI); plt.close(fig)
 report(f"Three radii at z=2: R_b={RbS:.1f}, R_ta={RtaS:.1f}, R_e={ReS:.1f} kpc; edge turnaround t={tta_e:.2f} Gyr, R_ta={Rta(MTOT):.1f}")
 
@@ -853,7 +852,11 @@ ax.set_xticks([20, 30, 50, 100, 150]); ax.set_xticklabels(["20", "30", "50", "10
 ax.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
 ax.set_xlabel(r"$v$ [km s$^{-1}$]"); ax.set_ylabel(r"surface density [M$_\odot$ pc$^{-2}$]")
 ax.legend(frameon=False, fontsize=6, loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2, columnspacing=0.8, handlelength=1.5)
-fig.tight_layout(); fig.savefig("fig16_surface_density.png", dpi=DPI); plt.close(fig)
+fig.tight_layout(); fig.savefig("fig16_surface_density.png", dpi=DPI)
+# letter version (Fig. A.2 of the letter): P18 cited as P18
+for _t in ax.get_legend().get_texts():
+    _t.set_text(_t.get_text().replace("(Parodi 2018)", "(P18)"))
+fig.savefig("fig_sigma.png", dpi=DPI); plt.close(fig)
 # ---- distribution of r_c/v: model (spin distribution x epoch of end of growth) vs SPARC
 from scipy.stats import norm as _norm, kstest as _kst
 ZG = np.array([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.8, 1.0, 1.25, 1.5, 2.0, 2.5, 3.0])
@@ -1223,7 +1226,12 @@ ax[1].axvline(2/np.pi, c="0.6", lw=0.7); ax[1].text(2/np.pi*1.12, 0.4, "turnarou
 ax[1].text(_xb0*0.85, 1.2e0, "front", fontsize=7.5, color="0.2", ha="right")
 ax[1].set_xlabel(r"$\xi=R/vt$"); ax[1].set_ylabel(r"$P(\xi)=G\,t^2\rho$")
 ax[1].set_xlim(1e-3, 100); ax[1].set_ylim(1e-2, 1e5); ax[1].legend(frameon=False, fontsize=7.5, loc="upper right")
-fig.tight_layout(); fig.savefig("fig15_phase1_profile.png", dpi=DPI); plt.close(fig)
+fig.tight_layout(); fig.savefig("fig15_phase1_profile.png", dpi=DPI)
+# letter version (Fig. A.1 of the letter): labels without the long paper's phases and equation numbers
+for _t, _l in zip(ax[1].get_legend().get_texts(), ["inside the front: P18 profile", "outside: local density (A.8)",
+                                                   "outside: mean density inside $R$", r"background $1/(6\pi)$"]):
+    _t.set_text(_l)
+fig.savefig("fig_selfsim.png", dpi=DPI); plt.close(fig)
 report(f"Phase I profile: P jump at front = {_P_in(_xb0)/_P_out(_etab):.3f}, P_out(xi->inf)*6pi = {_P_out(1e-4)*6*np.pi:.4f}")
 
 # ================= OUT-OF-SAMPLE TEST: SPARC galaxies NOT used to define the P18 profile =================
@@ -1322,7 +1330,7 @@ for g, b in zip(SPF, B1):
 _Ms, _Mg = np.array(_Ms), np.array(_Mg); _Mb = _Ms+_Mg
 _vv = np.array([g["v"] for g in SPF]); _rr = np.array([g["rc"] for g in SPF])
 _Mt = _vv**2*_y8*_rr/G*(1+1/(4*_y8))
-_kap = np.log(_y8*_rr/(np.e*Rd_)); _fb = _Mb/_Mt
+_kap = np.log(_y8*_rr/(np.e*Rd_)) - (1 - np.euler_gamma); _fb = _Mb/_Mt   # exponential disc: <ln R> = ln R_d + 1 - gamma
 _ed = -2*_kap*_fb                                   # dissipation
 _ef = 2*(710/_vv)**2*_Ms/_Mt                    # feedback per unit coupling f_c (1e51 erg per 100 Msun of stars)
 _pc = lambda a: np.percentile(a, [16, 50, 84])
@@ -1340,7 +1348,7 @@ def _vc(v, rc, R): return _g.irc(np.maximum(R, 1e-9), v, rc)
 _fits = {r["name"]: r for r in csv.DictReader(open("sparc_data/sparc79_fits.csv"))}
 fig, ax = plt.subplots(1, 3, figsize=(7.1, 2.35))
 T0 = t_of_z(0); _tt = np.linspace(t_of_z(15), T0, 300)
-for k, (gname, col) in enumerate([("DDO154", C1), ("NGC2915", C2)]):
+for k, (gname, col, zalt) in enumerate([("DDO154", C1, 1.0), ("NGC2915", C2, 2.0)]):
     g = _fits[gname]; v_ = float(g["v"]); rc_ = float(g["rc"]); erc = float(g["erc"])
     zacc = brentq(lambda z: _g.grow(v_, LAMSPIN, z)[0]-rc_, 0, 10); tacc = t_of_z(zacc)
     d = np.loadtxt(f"sparc_data/rotmod/{gname}_rotmod.dat")
@@ -1356,10 +1364,16 @@ for k, (gname, col) in enumerate([("DDO154", C1), ("NGC2915", C2)]):
     tg = _tt[_tt <= tacc]; ax[2].plot(tg, [_core(v_, LAMSPIN, t) for t in tg], c=col, lw=1.8, label=f"{gname[:3]} {gname[3:]}")
     ax[2].plot([tacc, T0], [rc_, rc_], c=col, lw=1.2, ls=":")
     ax[2].axhspan(rc_-erc, rc_+erc, color=col, alpha=0.12, lw=0)
+    # degeneracy (Sect. 5): growth ending earlier, at zalt, plus feedback eps rising linearly in time
+    # to the value eps_f that gives today the same core (Eq. 9)
+    tb = t_of_z(zalt); ef = brentq(lambda e: _g.grow(v_, LAMSPIN, zalt, e)[1]-rc_, 0, 0.2)
+    _ta = np.linspace(tb, T0, 200)
+    ax[2].plot(_ta, [_g.grow(v_, LAMSPIN, zalt, ef*(t-tb)/(T0-tb))[1] for t in _ta], c=col, lw=1.2, ls="-.")
+    report(f"degeneracy: {gname} growth ending at z={zalt} (r_c={_g.grow(v_, LAMSPIN, zalt)[0]:.2f}) plus eps rising linearly to {ef:.4f} gives r_c={rc_:.2f} today")
     report(f"grown galaxies: {gname} v={v_:.1f} rc={rc_:.2f} -> z_acc={zacc:.3f} (t={tacc:.2f} Gyr), chi2/N of IRC={chi:.2f}")
 ax[0].set_ylabel(r"$v_c$ [km s$^{-1}$]")
 ax[2].set_xlabel(r"cosmic time $t$ [Gyr]"); ax[2].set_ylabel(r"$r_c$ [kpc]"); ax[2].set_xlim(0, T0); ax[2].set_ylim(0, None)
-ax[2].legend(frameon=False, fontsize=7.5, loc="upper left"); ax[2].set_title(r"core growth, $\lambda=0.035$", fontsize=8.5)
+ax[2].legend(frameon=False, fontsize=7.5, loc="lower right"); ax[2].set_title(r"core growth, $\lambda=0.035$", fontsize=8.5)
 fig.tight_layout(); fig.savefig("fig18_grow.png", dpi=DPI); plt.close(fig)
 
 # ---- resolution and distance (referee point): does r_c depend on distance or on the innermost radius at fixed v?

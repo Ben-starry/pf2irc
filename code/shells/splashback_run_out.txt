@@ -1,0 +1,20 @@
+prog 200000 0.0444 18
+prog 400000 0.0949 38
+prog 600000 0.1816 59
+prog 800000 0.3392 78
+prog 1000000 0.6045 98
+prog 1200000 0.9541 118
+prog 1400000 1.3651 139
+prog 1600000 1.8287 158
+prog 1800000 2.3156 178
+prog 2000000 2.829 198
+t=1.885: r_sp(99%)/vt = 0.695, max = 7.138; in units of current r_ta: 1.092, 11.212
+t=2.042: r_sp(99%)/vt = 0.697, max = 7.136; in units of current r_ta: 1.094, 11.210
+t=2.199: r_sp(99%)/vt = 0.699, max = 7.135; in units of current r_ta: 1.098, 11.207
+t=2.356: r_sp(99%)/vt = 0.702, max = 7.134; in units of current r_ta: 1.103, 11.205
+t=2.513: r_sp(99%)/vt = 0.705, max = 7.132; in units of current r_ta: 1.107, 11.204
+t=2.670: r_sp(99%)/vt = 0.707, max = 7.131; in units of current r_ta: 1.110, 11.202
+t=2.827: r_sp(99%)/vt = 0.711, max = 7.130; in units of current r_ta: 1.117, 11.201
+t=2.985: r_sp(99%)/vt = 0.711, max = 7.130; in units of current r_ta: 1.117, 11.199
+t=3.142: r_sp(99%)/vt = 0.713, max = 7.129; in units of current r_ta: 1.120, 11.198
+mean over snapshots: r_sp/vt = 0.704 +- 0.006 (99%), 7.133 (max); = 1.106 r_ta,now; front xi_b = 0.1751 -> r_sp/R_b = 4.02; steps 2117903, 211s

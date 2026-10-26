@@ -1,0 +1,20 @@
+79 galaxies, 964 points
+mass excess c(n): n=1: -0.000, n=1.5: +0.108, n=1.75: +0.176, n=2: +0.250
+
+One n for all galaxies (v, r_c free per galaxy):
+  n = 1.00: chi2 =   950.8
+  n = 1.50: chi2 =   403.0
+  n = 1.75: chi2 =   369.6
+  n = 2.00: chi2 =   388.6
+  n = 2.50: chi2 =   505.5
+  n = 3.00: chi2 =   682.1
+  best common n = 1.76, chi2 = 369.5
+
+n free per galaxy: chi2 = 168.3 (n = 2 fixed: 388.6), 79 extra parameters
+  n constrained (sigma_n < 1, not at a bound): 49 galaxies; at bounds: 2 at 0.5, 4 at 4.0
+  median n = 1.59  (16-84%: 1.19-2.45)
+  maximum likelihood: mean n = 1.65, intrinsic scatter = 0.44
+  below n = 2 by > 2 sigma: 11, above by > 2 sigma: 1
+  Spearman n vs v: -0.48 (p = 0.00)
+
+per-galaxy results written to fit_exponent_results.csv
